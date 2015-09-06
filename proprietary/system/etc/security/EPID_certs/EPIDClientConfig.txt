@@ -1,0 +1,6 @@
+epidparamcertfilepath = /system/etc/security/EPID_certs/epid_paramcert.dat
+preprodgrouplegacycertfilepath1 = /system/etc/security/EPID_certs/PAVP_Group_CLPEPIDPREPROD_G1_Public_Keys.bin
+preprodgrouplegacycertfilepath2 = /system/etc/security/EPID_certs/PAVP_Group_CLPEPIDPREPROD_G2_Public_Keys.bin
+prodgrouplegacycertfilepath1 = /system/etc/security/EPID_certs/PAVP_Group_CLPEPIDPROD_G1_Public_Keys.bin
+prodgrouplegacycertfilepath2 = /system/etc/security/EPID_certs/PAVP_Group_CLPEPIDPROD_G2_Public_Keys.bin
+x509groupcertfilepath = /system/etc/security/EPID_certs/
