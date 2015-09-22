@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<amax-platform>
+    <feature name="amax.system.textview.magnifier" version="1.0.1"/>
+</amax-platform>
