@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+    <config name="kernel_version">KERNEL VERSION</config>
+    <config name="build_number">BUILD NUMBER</config>
+    <config name="baseband_version">BASEBAND VERSION</config>
+    <config name="isCTA">false</config>
+    <config name="isPadFone">false</config>
+    <config name="BL_isIndoorSaving ">false</config>
+    <config name="BL_hasPadLightSensor">false</config>
+    <config name="BL_hasDDS ">false</config>
+</resources>
