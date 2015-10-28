@@ -121,6 +121,7 @@ can be used:
         <MediaCodec name="OMX.Intel.vorbis.decoder" type="audio/vorbis" />
         <MediaCodec name="OMX.google.vorbis.decoder" type="audio/vorbis" />
         <MediaCodec name="OMX.Intel.alac.decoder" type="audio/alac" />
+        <MediaCodec name="OMX.google.opus.decoder" type="audio/opus" />
 <!--
         <MediaCodec name="OMX.Intel.wma.decoder" type="audio/x-ms-wma" />
 -->

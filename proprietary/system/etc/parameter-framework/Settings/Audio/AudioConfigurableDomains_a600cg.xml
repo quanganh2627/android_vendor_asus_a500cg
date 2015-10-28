@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ConfigurableDomains xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation=".ZuPo7dRMq4/Schemas/ConfigurableDomains.xsd" SystemClassName="Audio">
+<ConfigurableDomains xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation=".OmSbDbJQgD/Schemas/ConfigurableDomains.xsd" SystemClassName="Audio">
   <ConfigurableDomain Name="Multimedia.OutputDevice.Private.Selected" SequenceAware="false">
     <Configurations>
       <Configuration Name="Multimedia.WiredSpeakers">
@@ -3019,7 +3019,7 @@
       </Configuration>
       <Configuration Name="Fm.Speaker">
         <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME">
-          <IntegerParameter Name="VOLUME">24 24</IntegerParameter>
+          <IntegerParameter Name="VOLUME">29 29</IntegerParameter>
         </ConfigurableElement>
         <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/DAC1">
           <IntegerParameter Name="DAC1">170 170</IntegerParameter>
@@ -3614,6 +3614,7 @@
       <Configuration Name="Unmute">
         <CompoundRule Type="All">
           <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Flow"/>
+          <SelectionCriterionRule SelectionCriterion="MicMute" MatchesWhen="Is" Value="Off"/>
           <CompoundRule Type="Any">
             <SelectionCriterionRule SelectionCriterion="OpenedCaptureRoutes" MatchesWhen="Includes" Value="HwCodecCSV"/>
             <SelectionCriterionRule SelectionCriterion="OpenedCaptureRoutes" MatchesWhen="Includes" Value="BtCSV"/>
@@ -3675,11 +3676,11 @@
       </Configuration>
     </Settings>
   </ConfigurableDomain>
-  <ConfigurableDomain Name="Routing.Enable.HWCodec.Playback.WiredSpeakers" SequenceAware="false">
+  <ConfigurableDomain Name="Routing.Mute.HWCodec.Playback.WiredSpeakers" SequenceAware="false">
     <Configurations>
-      <Configuration Name="Enable">
+      <Configuration Name="Unmute">
         <CompoundRule Type="All">
-          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Path"/>
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Flow"/>
           <CompoundRule Type="Any">
             <CompoundRule Type="All">
               <CompoundRule Type="Any">
@@ -3706,9 +3707,9 @@
           </CompoundRule>
         </CompoundRule>
       </Configuration>
-      <Configuration Name="Disable">
+      <Configuration Name="Mute">
         <CompoundRule Type="All">
-          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Path"/>
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Flow"/>
         </CompoundRule>
       </Configuration>
     </Configurations>
@@ -3716,23 +3717,23 @@
       <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/SWITCH"/>
     </ConfigurableElements>
     <Settings>
-      <Configuration Name="Enable">
+      <Configuration Name="Unmute">
         <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/SWITCH">
           <BooleanParameter Name="SWITCH">1</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
-      <Configuration Name="Disable">
+      <Configuration Name="Mute">
         <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/SWITCH">
           <BooleanParameter Name="SWITCH">0</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
     </Settings>
   </ConfigurableDomain>
-  <ConfigurableDomain Name="Routing.Enable.HWCodec.Playback.IHF" SequenceAware="false">
+  <ConfigurableDomain Name="Routing.Mute.HWCodec.Playback.IHF" SequenceAware="false">
     <Configurations>
-      <Configuration Name="Enable">
+      <Configuration Name="Unmute">
         <CompoundRule Type="All">
-          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Path"/>
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Flow"/>
           <CompoundRule Type="Any">
             <CompoundRule Type="All">
               <SelectionCriterionRule SelectionCriterion="SelectedOutputDevice" MatchesWhen="Includes" Value="IHF"/>
@@ -3753,9 +3754,9 @@
           </CompoundRule>
         </CompoundRule>
       </Configuration>
-      <Configuration Name="Disable">
+      <Configuration Name="Mute">
         <CompoundRule Type="All">
-          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Path"/>
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Flow"/>
         </CompoundRule>
       </Configuration>
     </Configurations>
@@ -3763,23 +3764,23 @@
       <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/SWITCH"/>
     </ConfigurableElements>
     <Settings>
-      <Configuration Name="Enable">
+      <Configuration Name="Unmute">
         <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/SWITCH">
           <BooleanParameter Name="SWITCH">1</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
-      <Configuration Name="Disable">
+      <Configuration Name="Mute">
         <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/SWITCH">
           <BooleanParameter Name="SWITCH">0</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
     </Settings>
   </ConfigurableDomain>
-  <ConfigurableDomain Name="Routing.Enable.HWCodec.Playback.Earpiece" SequenceAware="false">
+  <ConfigurableDomain Name="Routing.Mute.HWCodec.Playback.Earpiece" SequenceAware="false">
     <Configurations>
-      <Configuration Name="Enable">
+      <Configuration Name="Unmute">
         <CompoundRule Type="All">
-          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Path"/>
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Flow"/>
           <CompoundRule Type="All">
             <SelectionCriterionRule SelectionCriterion="HAC" MatchesWhen="Is" Value="Off"/>
             <SelectionCriterionRule SelectionCriterion="SelectedOutputDevice" MatchesWhen="Includes" Value="Earpiece"/>
@@ -3790,9 +3791,9 @@
           </CompoundRule>
         </CompoundRule>
       </Configuration>
-      <Configuration Name="Disable">
+      <Configuration Name="Mute">
         <CompoundRule Type="All">
-          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Path"/>
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Flow"/>
         </CompoundRule>
       </Configuration>
     </Configurations>
@@ -3802,7 +3803,7 @@
       <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/EARPIECE/ANALOG/SWITCH"/>
     </ConfigurableElements>
     <Settings>
-      <Configuration Name="Enable">
+      <Configuration Name="Unmute">
         <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/EARPIECE/SWITCH">
           <BooleanParameter Name="SWITCH">1</BooleanParameter>
         </ConfigurableElement>
@@ -3813,7 +3814,7 @@
           <BooleanParameter Name="SWITCH">1</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
-      <Configuration Name="Disable">
+      <Configuration Name="Mute">
         <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/EARPIECE/SWITCH">
           <BooleanParameter Name="SWITCH">0</BooleanParameter>
         </ConfigurableElement>
@@ -4048,7 +4049,7 @@
       </Configuration>
       <Configuration Name="Enable.Speaker">
         <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/INPUT/ANALOG/IN/VOLUME">
-          <IntegerParameter Name="VOLUME">23 23</IntegerParameter>
+          <IntegerParameter Name="VOLUME">31 31</IntegerParameter>
         </ConfigurableElement>
         <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/HEADPHONE_MIXER/RIGHT/IN/SWITCH">
           <BooleanParameter Name="SWITCH">0</BooleanParameter>
@@ -4521,6 +4522,7 @@
           <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
           <CompoundRule Type="All">
             <SelectionCriterionRule SelectionCriterion="OpenedCaptureRoutes" MatchesWhen="Includes" Value="HwCodecMedia"/>
+            <SelectionCriterionRule SelectionCriterion="OpenedCaptureRoutes" MatchesWhen="Excludes" Value="HwCodecCSV"/>
             <SelectionCriterionRule SelectionCriterion="AudioSource" MatchesWhen="IsNot" Value="Camcorder"/>
             <SelectionCriterionRule SelectionCriterion="Mode" MatchesWhen="IsNot" Value="InVoipCall"/>
             <CompoundRule Type="Any">
@@ -4546,6 +4548,7 @@
                 <SelectionCriterionRule SelectionCriterion="TTYDirection" MatchesWhen="Is" Value="Downlink"/>
               </CompoundRule>
             </CompoundRule>
+            <SelectionCriterionRule SelectionCriterion="MicMute" MatchesWhen="Is" Value="Off"/>
           </CompoundRule>
         </CompoundRule>
       </Configuration>
@@ -4565,6 +4568,7 @@
                 <SelectionCriterionRule SelectionCriterion="TTYDirection" MatchesWhen="Is" Value="Downlink"/>
               </CompoundRule>
             </CompoundRule>
+            <SelectionCriterionRule SelectionCriterion="MicMute" MatchesWhen="Is" Value="Off"/>
           </CompoundRule>
         </CompoundRule>
       </Configuration>
@@ -4580,6 +4584,7 @@
                 <SelectionCriterionRule SelectionCriterion="TTYDirection" MatchesWhen="Is" Value="Downlink"/>
               </CompoundRule>
             </CompoundRule>
+            <SelectionCriterionRule SelectionCriterion="MicMute" MatchesWhen="Is" Value="Off"/>
           </CompoundRule>
         </CompoundRule>
       </Configuration>
@@ -4596,6 +4601,7 @@
                 <SelectionCriterionRule SelectionCriterion="TTYDirection" MatchesWhen="Is" Value="Downlink"/>
               </CompoundRule>
             </CompoundRule>
+            <SelectionCriterionRule SelectionCriterion="MicMute" MatchesWhen="Is" Value="Off"/>
           </CompoundRule>
         </CompoundRule>
       </Configuration>
@@ -4609,6 +4615,7 @@
               <SelectionCriterionRule SelectionCriterion="SelectedInputDevice" MatchesWhen="Includes" Value="Main"/>
               <SelectionCriterionRule SelectionCriterion="SelectedInputDevice" MatchesWhen="Includes" Value="Back"/>
             </CompoundRule>
+            <SelectionCriterionRule SelectionCriterion="MicMute" MatchesWhen="Is" Value="Off"/>
           </CompoundRule>
         </CompoundRule>
       </Configuration>
@@ -4777,6 +4784,7 @@
           <CompoundRule Type="All">
             <SelectionCriterionRule SelectionCriterion="SelectedInputDevice" MatchesWhen="Includes" Value="Headset"/>
             <SelectionCriterionRule SelectionCriterion="OpenedCaptureRoutes" MatchesWhen="Includes" Value="HwCodecMedia"/>
+            <SelectionCriterionRule SelectionCriterion="MicMute" MatchesWhen="Is" Value="Off"/>
           </CompoundRule>
         </CompoundRule>
       </Configuration>
@@ -4787,6 +4795,7 @@
             <SelectionCriterionRule SelectionCriterion="TTYDirection" MatchesWhen="IsNot" Value="Downlink"/>
             <SelectionCriterionRule SelectionCriterion="SelectedOutputDevice" MatchesWhen="Includes" Value="Headset"/>
             <SelectionCriterionRule SelectionCriterion="OpenedCaptureRoutes" MatchesWhen="Includes" Value="HwCodecCSV"/>
+            <SelectionCriterionRule SelectionCriterion="MicMute" MatchesWhen="Is" Value="Off"/>
           </CompoundRule>
         </CompoundRule>
       </Configuration>
@@ -4967,6 +4976,7 @@
             <CompoundRule Type="All">
               <SelectionCriterionRule SelectionCriterion="SelectedInputDevice" MatchesWhen="Includes" Value="Main"/>
               <SelectionCriterionRule SelectionCriterion="OpenedCaptureRoutes" MatchesWhen="Includes" Value="HwCodecMedia"/>
+              <SelectionCriterionRule SelectionCriterion="OpenedCaptureRoutes" MatchesWhen="Excludes" Value="HwCodecCSV"/>
               <SelectionCriterionRule SelectionCriterion="Mode" MatchesWhen="IsNot" Value="InVoipCall"/>
             </CompoundRule>
             <CompoundRule Type="All">
@@ -5487,7 +5497,7 @@
       </Configuration>
     </Settings>
   </ConfigurableDomain>
-  <ConfigurableDomain Name="Routing.Configure.Voice.playback" SequenceAware="true">
+  <ConfigurableDomain Name="Routing.Configure.Voice.Playback" SequenceAware="true">
     <Configurations>
       <Configuration Name="Enable.BtCSV">
         <CompoundRule Type="All">
@@ -5609,7 +5619,10 @@
           <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
           <CompoundRule Type="All">
             <SelectionCriterionRule SelectionCriterion="SelectedOutputDevice" MatchesWhen="Includes" Value="IHF"/>
-            <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="HwCodecMedia"/>
+            <CompoundRule Type="Any">
+              <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="HwCodecMedia"/>
+              <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="ModemMix"/>
+            </CompoundRule>
           </CompoundRule>
         </CompoundRule>
       </Configuration>
@@ -5641,8 +5654,11 @@
         <CompoundRule Type="All">
           <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
           <CompoundRule Type="All">
-            <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="HwCodecMedia"/>
             <SelectionCriterionRule SelectionCriterion="SelectedOutputDevice" MatchesWhen="Excludes" Value="IHF"/>
+            <CompoundRule Type="Any">
+              <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="HwCodecMedia"/>
+              <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="ModemMix"/>
+            </CompoundRule>
             <CompoundRule Type="Any">
               <SelectionCriterionRule SelectionCriterion="SelectedOutputDevice" MatchesWhen="Includes" Value="Headset"/>
               <SelectionCriterionRule SelectionCriterion="SelectedOutputDevice" MatchesWhen="Includes" Value="Headphones"/>

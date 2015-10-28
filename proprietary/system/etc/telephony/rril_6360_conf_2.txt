@@ -58,6 +58,7 @@ Group RequestTimeouts
     GetIPAddress                       30000
     GetDNS                             30000
     SetInitialAttachApn               300000
+    RegisterNetwork                   610000
     EnterSimPin                        20000
     AllowData                         300000
     EnterSimPin2                       20000
