@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ConfigurableDomains xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation=".qwWcCGPL6i/Schemas/ConfigurableDomains.xsd" SystemClassName="Route">
+<ConfigurableDomains xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation=".MuPIoEeYH9/Schemas/ConfigurableDomains.xsd" SystemClassName="Route">
   <ConfigurableDomain Name="Calibration.HwPlatform" SequenceAware="false">
     <Configurations>
       <Configuration Name="Default">
@@ -669,6 +669,13 @@
             <SelectionCriterionRule SelectionCriterion="AndroidMode" MatchesWhen="Is" Value="Normal"/>
             <SelectionCriterionRule SelectionCriterion="AndroidMode" MatchesWhen="Is" Value="RingTone"/>
             <SelectionCriterionRule SelectionCriterion="AndroidMode" MatchesWhen="Is" Value="InVoipCall"/>
+            <CompoundRule Type="All">
+              <SelectionCriterionRule SelectionCriterion="AndroidMode" MatchesWhen="Is" Value="InCsvCall"/>
+              <CompoundRule Type="Any">
+                <SelectionCriterionRule SelectionCriterion="ModemState" MatchesWhen="Is" Value="False"/>
+                <SelectionCriterionRule SelectionCriterion="ModemAudioAvailable" MatchesWhen="Is" Value="False"/>
+              </CompoundRule>
+            </CompoundRule>
           </CompoundRule>
           <CompoundRule Type="Any">
             <SelectionCriterionRule SelectionCriterion="OutputDevices" MatchesWhen="Includes" Value="Earpiece"/>
@@ -707,6 +714,13 @@
             <SelectionCriterionRule SelectionCriterion="AndroidMode" MatchesWhen="Is" Value="Normal"/>
             <SelectionCriterionRule SelectionCriterion="AndroidMode" MatchesWhen="Is" Value="RingTone"/>
             <SelectionCriterionRule SelectionCriterion="AndroidMode" MatchesWhen="Is" Value="InVoipCall"/>
+            <CompoundRule Type="All">
+              <SelectionCriterionRule SelectionCriterion="AndroidMode" MatchesWhen="Is" Value="InCsvCall"/>
+              <CompoundRule Type="Any">
+                <SelectionCriterionRule SelectionCriterion="ModemState" MatchesWhen="Is" Value="False"/>
+                <SelectionCriterionRule SelectionCriterion="ModemAudioAvailable" MatchesWhen="Is" Value="False"/>
+              </CompoundRule>
+            </CompoundRule>
           </CompoundRule>
           <CompoundRule Type="Any">
             <SelectionCriterionRule SelectionCriterion="InputDevices" MatchesWhen="Includes" Value="Main"/>
@@ -893,6 +907,13 @@
             <SelectionCriterionRule SelectionCriterion="AndroidMode" MatchesWhen="Is" Value="Normal"/>
             <SelectionCriterionRule SelectionCriterion="AndroidMode" MatchesWhen="Is" Value="RingTone"/>
             <SelectionCriterionRule SelectionCriterion="AndroidMode" MatchesWhen="Is" Value="InVoipCall"/>
+            <CompoundRule Type="All">
+              <SelectionCriterionRule SelectionCriterion="AndroidMode" MatchesWhen="Is" Value="InCsvCall"/>
+              <CompoundRule Type="Any">
+                <SelectionCriterionRule SelectionCriterion="ModemState" MatchesWhen="Is" Value="False"/>
+                <SelectionCriterionRule SelectionCriterion="ModemAudioAvailable" MatchesWhen="Is" Value="False"/>
+              </CompoundRule>
+            </CompoundRule>
           </CompoundRule>
           <CompoundRule Type="Any">
             <SelectionCriterionRule SelectionCriterion="OutputDevices" MatchesWhen="Includes" Value="Earpiece"/>

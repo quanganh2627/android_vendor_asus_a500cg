@@ -15,8 +15,8 @@ if [ ! -d /config/telephony/${inst_id} ]; then
         mkdir /config/telephony/${inst_id}
         chmod 770 /config/telephony/${inst_id}
         chown system.radio /config/telephony/${inst_id}
-        mv /config/telephony/*.nvm /config/telephony/${inst_id}
-        mv /config/telephony/*.bkup /config/telephony/${inst_id}
+        cp /config/telephony/*.nvm /config/telephony/${inst_id}
+        cp /config/telephony/*.bkup /config/telephony/${inst_id}
         ;;
     2)
         if [ -d /config/telephony/mmgr2 ]; then
