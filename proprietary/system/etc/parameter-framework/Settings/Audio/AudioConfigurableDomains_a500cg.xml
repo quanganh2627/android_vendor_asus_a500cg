@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ConfigurableDomains xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation=".4a1yHFNznU/Schemas/ConfigurableDomains.xsd" SystemClassName="Audio">
+<ConfigurableDomains xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation=".58CrsnFWyr/Schemas/ConfigurableDomains.xsd" SystemClassName="Audio">
   <ConfigurableDomain Name="Multimedia.OutputDevice.Private.Selected" SequenceAware="false">
     <Configurations>
       <Configuration Name="Multimedia.WiredSpeakers">
